@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SalesWebMVC.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<SalesWebMVCContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("SalesWebMVCContext"), builder => builder.MigrationsAssembly("SalesWebMvc")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SalesWebMVCContext"), builder => builder.MigrationsAssembly("SalesWebMVC")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
